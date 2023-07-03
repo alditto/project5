@@ -4,12 +4,12 @@ from django.core.exceptions import ValidationError
 # Validación (debe tener 7 dígitos)
 def validate_nroregistro(value):
     if len(value) != 7:
-        raise ValidationError('El numero de registro del libro debe tener 7 dígitos.')
+        raise ValidationError('El numero de registro del libro debe tener 7 dígitos')
 
 # Validación cantidad de días de préstamo del libro
 def validate_prestamo_days(value):
     if value <= 0:
-        raise ValidationError('Los días de préstamo deben ser mayores que 0.')
+        raise ValidationError('Los días de préstamo deben ser mayores que 0')
 
 class Autor(models.Model):
     nombre = models.CharField(max_length=100)
